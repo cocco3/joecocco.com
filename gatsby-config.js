@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/joecocco.com",
+  pathPrefix: '/joecocco.com',
   siteMetadata: {
     title: `Joe Cocco`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,

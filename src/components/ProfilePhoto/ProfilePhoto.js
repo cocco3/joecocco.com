@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
-import PropTypes from 'prop-types'
 
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
@@ -10,11 +9,7 @@ import React from 'react'
 
 import styles from './styles'
 
-function ProfilePhoto(props) {
-  const {
-    src
-  } = props
-
+function ProfilePhoto() {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "joe-cocco.jpg" }) {
@@ -29,14 +24,12 @@ function ProfilePhoto(props) {
 
   return (
     <Img
-      css={css`${styles.ProfilePhoto}`}
+      css={css`
+        ${styles.ProfilePhoto}
+      `}
       fluid={data.placeholderImage.childImageSharp.fluid}
     />
   )
-}
-
-ProfilePhoto.propTypes = {
-  src: PropTypes.string
 }
 
 export default ProfilePhoto

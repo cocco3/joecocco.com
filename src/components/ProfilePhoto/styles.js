@@ -8,6 +8,6 @@ export default {
     height: SIZE,
     lineHeight: SIZE,
     overflow: 'hidden',
-    width: SIZE
-  }
+    width: SIZE,
+  },
 }
