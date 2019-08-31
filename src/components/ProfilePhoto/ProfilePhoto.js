@@ -1,35 +1,26 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
-
 // eslint-disable-next-line
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import styles from './styles'
 
-function ProfilePhoto() {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "joe-cocco.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 256) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
+function ProfilePhoto(props) {
+  const {
+    img
+  } = props
+ 
   return (
-    <Img
-      css={css`
-        ${styles.ProfilePhoto}
-      `}
-      fluid={data.placeholderImage.childImageSharp.fluid}
-    />
+    <div css={css`${styles.ProfilePhoto}`}>
+      {img}
+    </div>
   )
+}
+
+ProfilePhoto.propTypes = {
+  img: PropTypes.element.isRequired
 }
 
 export default ProfilePhoto

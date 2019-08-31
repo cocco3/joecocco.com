@@ -1,4 +1,6 @@
 import React from 'react'
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import {
   Hero,
@@ -7,12 +9,40 @@ import {
   Timeline
 } from '../components'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Hero />
-    <Timeline />
-  </Layout>
-)
+function IndexPage(props) {
+
+  const ProfilePhoto = <Img
+    fluid={props.data.placeholderImage.childImageSharp.fluid}
+  />
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Hero
+        img={ProfilePhoto}
+      >
+        <p>
+          Hello, world!
+        </p>
+        <p>
+          Welcome to my little slice of the Internet
+        </p>
+      </Hero>
+      <Timeline />
+    </Layout>
+  )
+}
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query {
+    placeholderImage: file(relativePath: { eq: "joe-cocco.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 256) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

@@ -1,16 +1,46 @@
 import React from 'react'
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import {
+  Hero,
   Layout,
   SEO
 } from '../components'
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+function NotFoundPage(props) {
+
+  const ProfilePhoto = <Img
+    fluid={props.data.placeholderImage.childImageSharp.fluid}
+  />
+
+  return (
+    <Layout>
+      <SEO title="404: Not found" />
+      <Hero
+        img={ProfilePhoto}
+      >
+        <p>
+          Dakota says,
+        </p>
+        <p>
+          "What are you doing here? I hope you brought snacks!"
+        </p>
+      </Hero>
+    </Layout>
+  )
+}
 
 export default NotFoundPage
+
+export const pageQuery = graphql`
+  query {
+    placeholderImage: file(relativePath: { eq: "dakota.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 256) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
