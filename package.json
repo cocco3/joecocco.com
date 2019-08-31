@@ -35,8 +35,10 @@
   },
   "scripts": {
     "build": "gatsby build",
+    "build:prefix-paths": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "prepush:gh-pages": "npm run build:prefix-paths",
     "push:gh-pages": "gh-pages -d public -b gh-pages",
     "start": "npm run develop",
     "serve": "gatsby serve",
