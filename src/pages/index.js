@@ -22,6 +22,21 @@ function IndexPage(props) {
         img={ProfilePhoto}
       >
         <p>
+          Just getting started!
+          <br/>
+          Come back soon :)
+        </p>
+      </Hero>
+    </Layout>
+  )
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Hero
+        img={ProfilePhoto}
+      >
+        <p>
           Hello, world!
         </p>
         <p>
