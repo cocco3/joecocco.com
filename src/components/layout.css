@@ -620,3 +620,24 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+
+
+/* new */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #282c34;
+  min-height: 100vh;
+  color: white;
+}
+
+a {
+  color: white;
+}
