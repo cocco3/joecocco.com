@@ -32,13 +32,17 @@
   },
   "devDependencies": {
     "gh-pages": "^2.1.1",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0"
   },
   "scripts": {
     "build": "gatsby build",
     "build:prefix-paths": "gatsby build --prefix-paths",
+    "clean": "rimraf public .cache",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "prebuild": "npm run clean",
+    "prebuild:prefix-paths": "npm run clean",
     "prepush:gh-pages": "npm run build:prefix-paths",
     "push:gh-pages": "gh-pages -d public -b gh-pages",
     "start": "npm run develop",
