@@ -2,8 +2,8 @@ module.exports = {
   pathPrefix: '/joecocco.com',
   siteMetadata: {
     title: `Joe Cocco`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Joe Cocco is a front-end engineer in San Francisco.`,
+    author: `@cocco3`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

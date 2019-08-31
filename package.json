@@ -1,19 +1,20 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "joecocco",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Source code for joecocco.com",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Joe Cocco <cocco3@gmail.com>",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "cocco"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/cocco3/joecocco.com"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/cocco3/joecocco.com/issues"
   },
   "dependencies": {
     "@emotion/core": "^10.0.16",
