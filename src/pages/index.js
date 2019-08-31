@@ -24,7 +24,7 @@ function IndexPage(props) {
         <p>
           Just getting started!
           <br/>
-          Come back soon :)
+          Come back soon 😁
         </p>
       </Hero>
     </Layout>
