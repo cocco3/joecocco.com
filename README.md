@@ -92,6 +92,12 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+- Push to Github pages
+- Using custom domain name - make sure DNS records are correct
+    - https://help.github.com/en/articles/setting-up-an-apex-domain#configuring-a-records-with-your-dns-provider)
+
+```sh
+npm run push:gh-pages
+```
 
 <!-- AUTO-GENERATED-CONTENT:END -->

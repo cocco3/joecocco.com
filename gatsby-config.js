@@ -1,9 +1,8 @@
 module.exports = {
-  pathPrefix: '/joecocco.com',
   siteMetadata: {
     title: `Joe Cocco`,
     description: `Joe Cocco is a front-end engineer in San Francisco.`,
-    author: `@cocco3`,
+    author: `@cocco0345`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
