@@ -27,17 +27,17 @@
     "gatsby-plugin-sharp": "^2.2.13",
     "gatsby-source-filesystem": "^2.1.11",
     "gatsby-transformer-sharp": "^2.2.7",
+    "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "system-font-css": "^2.0.2"
   },
   "devDependencies": {
     "gh-pages": "^2.1.1",
-    "normalize.css": "^8.0.1",
     "prettier": "^1.18.2",
-    "rimraf": "^3.0.0",
-    "system-font-css": "^2.0.2"
+    "rimraf": "^3.0.0"
   },
   "scripts": {
     "build": "gatsby build",
