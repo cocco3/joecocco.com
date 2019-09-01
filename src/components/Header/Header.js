@@ -17,8 +17,9 @@ function Header() {
           to="/"
           css={css`${styles.Link}`}
         >
-          <span style={{ fontWeight: '200' }}>Joe</span>
-          <span style={{ fontWeight: '600' }}>Cocco</span>
+          <span css={css`${styles.FirstName}`}>Joe</span>
+          {` `}
+          <span css={css`${styles.LastName}`}>Cocco</span>
         </Link>
       </h1>
     </header>

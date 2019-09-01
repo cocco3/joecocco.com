@@ -2,7 +2,7 @@ export default {
   Blockquote: {
     position: 'relative',
     paddingLeft: '50px',
-    fontFamily: '"Georgia", serif',
+    fontFamily: `Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif`,
     fontSize: '3.2rem',
     fontWeight: 500,
     lineHeight: 1.3,
