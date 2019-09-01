@@ -6,6 +6,7 @@ export default {
     fontSize: '3.2rem',
     fontWeight: 500,
     lineHeight: 1.3,
+    margin: '0.6em 0.8em',
   
     '&::before, &::after': {
       color: 'rgba(166, 166, 166, 0.4)',
@@ -19,7 +20,7 @@ export default {
       left: 0,
       content: 'open-quote',
       marginRight: '0.15em',
-      verticalAlign: '-0.15em',
+      top: '0.3em',
     },
 
     '&::after': {

@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React from 'react'
 
 /** @jsx jsx */
@@ -10,7 +11,15 @@ function Footer() {
     <footer css={css`${styles.Footer}`}>
       © {new Date().getFullYear()}, Made possible with
       {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
+      
+      <a
+        href="https://www.gatsbyjs.org"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Gatsby
+      </a>
+
     </footer>
   )
 }

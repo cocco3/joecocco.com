@@ -30,6 +30,7 @@ function IndexPage(props) {
     </Layout>
   )
 
+  /* eslint-disable */
   return (
     <Layout>
       <SEO title="Home" />
@@ -45,6 +46,7 @@ function IndexPage(props) {
       </Hero>
       <Timeline />
     </Layout>
+    /* eslint-enable */
   )
 }
 

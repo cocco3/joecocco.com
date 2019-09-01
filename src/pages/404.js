@@ -9,8 +9,6 @@ import {
   SEO
 } from '../components'
 
-
-
 function GetRandomPhrase() {
 
   const PHRASES = [
@@ -21,7 +19,7 @@ function GetRandomPhrase() {
 
   const length = PHRASES.length
 
-  const index = Math.floor(Math.random() * (length + 1))
+  const index = Math.floor(Math.random() * length)
 
   return PHRASES[index]
 }
