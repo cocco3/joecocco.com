@@ -5,8 +5,26 @@ import Img from "gatsby-image"
 import {
   Hero,
   Layout,
+  Quote,
   SEO
 } from '../components'
+
+
+
+function GetRandomPhrase() {
+
+  const PHRASES = [
+    'What are you doing here? I hope you brought snacks!',
+    'You woke me up for this?',
+    `Are you lost? I'm calling Dad!`
+  ]
+
+  const length = PHRASES.length
+
+  const index = Math.floor(Math.random() * (length + 1))
+
+  return PHRASES[index]
+}
 
 function NotFoundPage(props) {
 
@@ -23,9 +41,9 @@ function NotFoundPage(props) {
         <p>
           Dakota says,
         </p>
-        <p>
-          "What are you doing here? I hope you brought snacks!"
-        </p>
+        <Quote>
+          {GetRandomPhrase()}
+        </Quote>
       </Hero>
     </Layout>
   )
