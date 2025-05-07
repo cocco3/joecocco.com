@@ -1,0 +1,39 @@
+.outer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+}
+
+.circle {
+  border-radius: 50%;
+  border: 1px solid #999999;
+  flex-shrink: 0;
+  height: 12px;
+  margin-block-start: 12px;
+  width: 12px;
+}
+
+.line {
+  background-color: #999999;
+  height: 100%;
+  margin-block-start: 8px;
+  margin-inline: auto;
+  width: 1px;
+}
+
+.body {
+  padding-block-end: 28px;
+}
+
+.title {
+  display: block;
+  font: 600 var(--type-text-xl);
+  margin-block: 0;
+}

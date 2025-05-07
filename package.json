@@ -1,54 +1,42 @@
 {
-  "name": "joecocco",
+  "name": "@cocco3/website",
+  "version": "2.0.0",
   "private": true,
-  "description": "Source code for joecocco.com",
-  "version": "0.1.0",
-  "author": "Joe Cocco <cocco3@gmail.com>",
-  "keywords": [
-    "gatsby",
-    "cocco"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cocco3/joecocco.com"
-  },
-  "bugs": {
-    "url": "https://github.com/cocco3/joecocco.com/issues"
+  "scripts": {
+    "init:git-hooks": "simple-git-hooks",
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.16",
-    "gatsby": "^2.13.73",
-    "gatsby-image": "^2.2.10",
-    "gatsby-plugin-manifest": "^2.2.6",
-    "gatsby-plugin-offline": "^2.2.7",
-    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
-    "gatsby-plugin-react-helmet": "^3.1.4",
-    "gatsby-plugin-sharp": "^2.2.13",
-    "gatsby-source-filesystem": "^2.1.11",
-    "gatsby-transformer-sharp": "^2.2.7",
-    "normalize.css": "^8.0.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1",
-    "system-font-css": "^2.0.2"
+    "@tabler/icons-react": "^3.33.0",
+    "clsx": "^2.1.1",
+    "next": "^15.1.8",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "gh-pages": "^2.1.1",
-    "prettier": "^1.18.2",
-    "rimraf": "^3.0.0"
+    "@eslint/eslintrc": "^3.3.1",
+    "@types/node": "^22.15.21",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "eslint": "^9.27.0",
+    "eslint-config-next": "^15.1.8",
+    "nano-staged": "^0.8.0",
+    "prettier": "^3.5.3",
+    "simple-git-hooks": "^2.13.0",
+    "typescript": "^5"
   },
-  "scripts": {
-    "build": "gatsby build",
-    "clean": "rimraf public .cache",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "prebuild": "npm run clean",
-    "prepush:gh-pages": "npm run build",
-    "push:gh-pages": "gh-pages -d public -b gh-pages",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  "simple-git-hooks": {
+    "pre-commit": "./node_modules/.bin/nano-staged"
+  },
+  "nano-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{js,jsx,ts,tsx,json,css,md,mdx,html}": [
+      "prettier --write"
+    ]
   }
 }
