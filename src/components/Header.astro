@@ -1,0 +1,38 @@
+---
+import profilePhoto from "../assets/cocco.jpeg";
+import Nav from "../components/Nav.astro";
+---
+
+<header class="header">
+  <a class="name">
+    <img class="img" src={profilePhoto.src} alt="" fetchpriority="high" />
+    Joe Cocco
+  </a>
+
+  <Nav />
+</header>
+
+<style>
+  .header {
+    align-items: center;
+    border-block-end: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+  }
+
+  .img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  .name {
+    align-items: center;
+    display: inline-flex;
+    font-size: 20px;
+    gap: 4px;
+  }
+</style>
