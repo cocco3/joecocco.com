@@ -1,0 +1,66 @@
+---
+import profilePhoto from "../assets/cocco.jpeg";
+import { info } from "../content/info";
+import { Icon } from "astro-icon/components";
+---
+
+<div class="wrapper">
+  <img class="avatar" src={profilePhoto.src} alt="" fetchpriority="high" />
+  <div class="info">
+    <div>{info.name}</div>
+    <ul class="about_list">
+      <li>
+        <span class="info_row">
+          <Icon name="mdi:location-on-outline" />
+          {info.location}
+        </span>
+      </li>
+      <li>
+        <span class="info_row">
+          <Icon name="mdi:email-outline" />
+          {info.email}
+        </span>
+      </li>
+      <li>
+        <a class="info_row">
+          <Icon name="cib:github" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .wrapper {
+    align-items: center;
+    border-block-end: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+  }
+  .avatar {
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+  }
+  .about_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 0;
+    }
+  }
+  .info_row {
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    gap: 4px;
+
+    svg {
+      height: 16px;
+      width: 16px;
+    }
+  }
+</style>
