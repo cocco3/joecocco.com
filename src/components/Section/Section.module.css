@@ -1,0 +1,9 @@
+.outer {
+  margin-block: 60px;
+}
+
+.title {
+  font: 600 var(--type-display-md);
+  margin-block: 0 16px;
+  scroll-margin-block-start: 64px;
+}

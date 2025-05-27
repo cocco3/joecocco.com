@@ -1,0 +1,13 @@
+.outer {
+  backdrop-filter: saturate(180%) blur(8px);
+  background-color: hsl(from #0f1e2a h s calc(l * 0.6) / 0.8);
+  position: sticky;
+  top: 0;
+}
+
+.inner {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  padding-block: 16px;
+}
