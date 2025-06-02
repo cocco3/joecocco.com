@@ -1,11 +1,12 @@
 :root {
   color-scheme: light dark;
 
-  --font-family-display: Inter, -apple-system, 'Helvetica Neue', sans-serif;
+  --font-family-display:
+    'Fira Code', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
   --font-family-body: 'Geist', Arial, Helvetica, sans-serif;
   --font-family-mono:
-    'Geist Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 
   --type-display-2xl: 72px/1.25 var(--font-family-display);
   --type-display-xl: 60px/1.2 var(--font-family-display);
