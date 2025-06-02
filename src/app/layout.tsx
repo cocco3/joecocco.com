@@ -4,6 +4,7 @@ import './globals.css'
 
 const firaCode = Fira_Code({
   variable: '--font-fira-code',
+  subsets: ['latin'],
 })
 
 const geistSans = Geist({
