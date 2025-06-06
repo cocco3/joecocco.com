@@ -21,16 +21,17 @@
   --type-text-sm: 14px/1.43 var(--font-family-body);
   --type-text-xs: 12px/1.5 var(--font-family-body);
 
-  --text-primary: #ffffff;
-  --text-secondary: #d8d3d4;
-  --text-tertiary: #9f9fa9;
+  --text-primary: oklch(0.97 0.01 92.79 / 1);
+  --text-secondary: oklch(from var(--text-primary) calc(l - 0.1) c h / 1);
+  --text-tertiary: oklch(from var(--text-primary) calc(l - 0.2) c h / 1);
 
-  --bg-primary: #0e0e10;
-  --bg-secondary: #171719;
+  --bg-primary: oklch(0.23 0.03 244 / 1);
+  --bg-secondary: oklch(from var(--bg-primary) calc(l + 0.05) c h / 1);
+  --bg-tertiary: oklch(from var(--bg-primary) calc(l + 0.1) c h / 1);
 
-  --border-primary: oklch(0.37 0.01 285.8 / 1);
-  --border-secondary: oklch(0.47 0.01 285.8 / 1);
-  --border-tertiary: oklch(0.67 0.01 285.8 / 1);
+  --border-primary: oklch(0.37 0.01 285 / 1);
+  --border-secondary: oklch(from var(--border-primary) calc(l + 0.1) c h / 1);
+  --border-tertiary: oklch(from var(--border-primary) calc(l + 0.2) c h / 1);
 }
 
 html {
@@ -38,15 +39,17 @@ html {
 }
 
 body {
-  color: light-dark(#171717, #f7f4ea);
-  background: light-dark(#ffffff, #0f1e2a);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   font: 400 var(--type-text-md);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
