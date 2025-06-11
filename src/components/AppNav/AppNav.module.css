@@ -1,6 +1,5 @@
 .nav_link {
   border-radius: 8px;
-  font: 500 var(--type-text-lg);
   padding-block: 8px;
   padding-inline: 8px;
   transition-property: background-color, color;
@@ -12,5 +11,17 @@
     background-color: #db7c5d;
     color: #0f1e2a;
     cursor: pointer;
+  }
+}
+
+@media (width <= 420px) {
+  .nav_link {
+    font: 500 var(--type-text-md);
+  }
+}
+
+@media (width > 420px) {
+  .nav_link {
+    font: 500 var(--type-text-lg);
   }
 }
