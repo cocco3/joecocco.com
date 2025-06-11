@@ -11,6 +11,7 @@ export const AppHeader = () => {
         nav: { href: '#experience', children: 'Experience' },
       },
       { id: 'projects', nav: { href: '#projects', children: 'Projects' } },
+      { id: 'videos', nav: { href: '#videos', children: 'Videos' } },
     ]
   }, [])
 
