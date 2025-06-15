@@ -46,7 +46,7 @@ export const experience: Experience[] = [
   {
     company: {
       name: 'DocuSign',
-      dates: 'May 2014 – May 2022',
+      dates: 'Apr 2013 – May 2022',
     },
     positions: [
       {
@@ -70,15 +70,15 @@ export const experience: Experience[] = [
       {
         title: 'Senior Software Engineer',
         location: 'San Francisco, CA',
-        dates: 'May 2014 – Aug 2015',
+        dates: 'Apr 2013 – Aug 2015',
         points: ['point 1,', 'point 2'],
       },
     ],
   },
   {
     company: {
-      name: 'Cartavi',
-      dates: 'Jan 2010 – May 2014',
+      name: 'Cartavi (acquired by DocuSign)',
+      dates: 'Jan 2010 – Apr 2013',
     },
     positions: [
       {
