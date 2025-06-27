@@ -8,11 +8,9 @@ type SectionProps = PropsWithChildren & {
 
 export const Section = ({ id, heading, children }: SectionProps) => {
   return (
-    <div className={`${styles.outer} wrapper`}>
-      <h2 className={styles.title} id={id}>
-        {heading}
-      </h2>
+    <section id={id} className={`${styles.outer} wrapper`}>
+      <h2 className={styles.title}>{heading}</h2>
       {children}
-    </div>
+    </section>
   )
 }

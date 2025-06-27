@@ -15,7 +15,7 @@ export const AboutSection = () => {
   const { name, title, about, email, location, github, linkedIn } = info
 
   return (
-    <div id="about" className={`${styles.outer} wrapper`}>
+    <section id="about" className={`${styles.outer} wrapper`}>
       <div className={styles.about_row}>
         <div className={styles.photo}>
           <img className={styles.photo_img} src="/joe-cocco.jpeg" alt="" />
@@ -44,6 +44,6 @@ export const AboutSection = () => {
           <div className={styles.description}>{about}</div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
