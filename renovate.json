@@ -39,6 +39,10 @@
       ]
     },
     {
+      "groupName": "next",
+      "matchPackageNames": ["next", "eslint-config-next"]
+    },
+    {
       "groupName": "storybook",
       "matchUpdateTypes": ["minor", "patch"],
       "matchPackageNames": [
