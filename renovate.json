@@ -1,6 +1,76 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    ":dependencyDashboard",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":ignoreModulesAndTests",
+    "packages:linters",
+    "replacements:all",
+    "workarounds:all",
+    "schedule:monthly"
+  ],
+  "separateMajorMinor": true,
+  "packageRules": [
+    {
+      "groupName": "node",
+      "matchPackageNames": ["@types/node", "node"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchManagers": ["npm", "nvm"],
+      "matchDatasources": ["npm", "nvm"]
+    },
+    {
+      "groupName": "angular",
+      "matchPackageNames": [
+        "@angular/*",
+        "@angular-devkit/*",
+        "angular-eslint",
+        "rxjs",
+        "zone.js",
+        "ng-packagr"
+      ]
+    },
+    {
+      "groupName": "react",
+      "matchPackageNames": [
+        "react",
+        "react-dom",
+        "@types/react",
+        "@types/react-dom"
+      ]
+    },
+    {
+      "groupName": "storybook",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchPackageNames": [
+        "storybook",
+        "@storybook/*",
+        "eslint-plugin-storybook",
+        "@chromatic-com/storybook"
+      ]
+    },
+    {
+      "groupName": "linting",
+      "matchPackageNames": ["@eslint/*", "eslint", "prettier"]
+    },
+    {
+      "groupName": "testing",
+      "matchPackageNames": ["jasmin-core", "@types/jasmine", "karma*"]
+    },
+    {
+      "groupName": "git hooks",
+      "matchPackageNames": ["nano-staged", "simple-git-hooks"]
+    },
+    {
+      "groupName": "fs-extra",
+      "matchPackageNames": ["fs-extra", "@types/fs-extra"]
+    },
+    {
+      "groupName": "typescript",
+      "matchPackageNames": ["typescript", "ts-node", "tslib"]
+    },
+    {
+      "groupName": "date-fns",
+      "matchPackageNames": ["date-fns", "@date-fns/*"]
+    }
   ]
 }
